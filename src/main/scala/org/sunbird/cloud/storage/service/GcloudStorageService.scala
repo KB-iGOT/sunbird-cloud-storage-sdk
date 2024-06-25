@@ -37,7 +37,7 @@ class GcloudStorageService(config: StorageConfig) extends BaseStorageService  {
           throw new StorageServiceException(message)
         }
 
-        blobStore.createContainerInLocation(null, container)
+        //blobStore.createContainerInLocation(null, container)
         val fileObj = new File(file)
         val payload = Files.asByteSource(fileObj)
         val  contentType = tika.detect(fileObj)
